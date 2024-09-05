@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <!-- -----Tailwind Cdn link----- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+            }
+        }
+    }
+}
+    </script>
+
+</head>
+<body class="bg-cyan-700">
+    
+    <div class="max-w-[90%] sm:max-w-[300px] mx-auto text-center flex flex-col justify-center items-center h-[100vh] sm:mt-10 mt-20 mb-20">
+        
+        <div class="w-full bg-gradient-to-r from-emerald-700 via-teal-600 to-gray-500 rounded-2xl p-4">
+            
+            <h1 class="text-3xl font-bold">BMI Calculator</h1>
+
+            <div class="bg-white mx-auto p-3 mt-5 rounded-lg">
+                <h3 class="text-xl font-semibold">Age</h3>
+                <input type="number" name="age" id="age" class="border-0 outline-none border-b-2 border-black text-center font-semibold mt-3">
+            </div>
+
+            <div class="bg-white mx-auto p-3 mt-5 rounded-lg flex justify-between text-xl font-semibold">
+                <label for="male">
+                    <input type="radio" name="gender" id="male" value="male"> Male
+                </label>
+                
+                <label for="female">
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                </label>
+            </div>
+
+            <div class="sm:flex justify-between items-center w-full gap-5 mt-5">
+
+                <div class="bg-white mx-auto p-3 rounded-lg sm:w-[49%] mb-5 sm:mb-0">
+                    <h3 class="text-xl font-semibold">height(m<sup>2</sup>)</h3>
+                    <input type="number" name="height" id="height" class="border-0 outline-none border-b-2 border-black text-center font-semibold mt-3 sm:w-[100%]">
+                </div>
+
+                <div class="bg-white mx-auto p-3 rounded-lg sm:w-[49%]">
+                    <h3 class="text-xl font-semibold">Weight(Kg)</h3>
+                    <input type="number" name="weight" id="weight" class="border-0 outline-none border-b-2 border-black text-center font-semibold mt-3 sm:w-[100%]">
+                </div>
+
+            </div>
+
+            <button onclick="calculateBmi()" class="bg-[#4545b0] w-full mt-5 rounded-lg p-2 font-bold text-white">Calculate BMI</button>
+
+
+            <div id="result">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
